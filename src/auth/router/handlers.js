@@ -16,6 +16,11 @@ async function handleSignup(req, res, next) {
   }
 }
 
+// function generateToken(user) {
+//   const expiresIn = process.env.TOKEN_EXPIRATION_TIME || '15m'; // Default to 15 minutes
+//   return jwt.sign({ user }, process.env.SECRET, { expiresIn });
+// }
+
 async function handleSignin(req, res, next) {
   try {
     const user = {

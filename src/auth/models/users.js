@@ -27,7 +27,7 @@ const userSchema = (sequelize, DataTypes) => {
 
   // Basic AUTH: Validating strings (username, password) 
   model.authenticateBasic = async function (username, password) {
-    const user = await this.findOne({ where: { username } });
+    const user = await this.findOne({where: { username }});
     if (!user) {
       throw new Error('User Not Found');
     }
